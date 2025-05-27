@@ -5,12 +5,16 @@ const navLinks = mobileNav.querySelectorAll(".mobile__nav a");
 
 let isNavOpen = false;
 
-function toggleNav() {
-  isNavOpen = !isNavOpen;
+function updateNavDisplay() {
   mobileNav.style.top = isNavOpen ? "0" : "-10000px";
   mobileNavBtnBars.forEach((bar) => {
     bar.style.background = isNavOpen ? "#fff" : "black";
   });
+}
+
+function toggleNav() {
+  isNavOpen = !isNavOpen;
+  updateNavDisplay();
 }
 
 mobileNavBtn.addEventListener("click", toggleNav);
@@ -18,8 +22,7 @@ mobileNavBtn.addEventListener("click", toggleNav);
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     isNavOpen = false;
-    mobileNav.style.top = "-10000px";
-    bar.style.background = !isNavOpen && "black";
+    updateNavDisplay();
   });
 });
 
