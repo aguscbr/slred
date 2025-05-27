@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda online</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="plugins/particles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ffa16094e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu-principal">
+      <div class="nav-imagen">
+        <img src="img/logo.png" alt="" />
+      </div>
+
+      <div class="nav-enlaces">
+        <a href="" class="active">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="https://serverlan.wispro.co/portal/sign_in?locale=es"
+          >Portal clientes</a
+        >
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <button id="mobileNavBtn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <ul class="mobile__nav">
+        <div class="mobile__nav__container particles" id="particles">
+          <li class="mobile__nav__item">
+            <a href="#inicio">
+              <span>Inicio</span>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="mobile__nav__item">
+            <a href="#planes">
+              <span>Planes</span>
+              <span>Planes</span>
+            </a>
+          </li>
+          <li class="mobile__nav__item">
+            <a href="#about">
+              <span>Sobre Nosotros</span>
+              <span>Sobre Nosotros</span>
+            </a>
+          </li>
+          <li class="mobile__nav__item">
+            <a href="https://serverlan.wispro.co/portal/sign_in?locale=es">
+              <span>Portal Clientes</span>
+              <span>Portal Clientes</span>
+            </a>
+          </li>
+          <li class="mobile__nav__item">
+            <a href="#contacto">
+              <span>Contacto</span>
+              <span>Contacto</span>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div>
+        <h1>Conectamos tu mundo con la mejor velocidad</h1>
+        <a href="#planes" class="btn">Planes</a>
+      </div>
+    </header>
+
+    <!-- PLANES -->
+    <section id="planes" class="planes">
+      <h1 class="title">Nuestros planes</h1>
+
+      <div class="cards-container">
+        <div class="card">
+          <div class="img-card">
+            <img src="img/50MB.png" alt="" />
+          </div>
+
+          <div class="content-card">
+            <h3>Plan Lite</h3>
+            <h2 class="price">$16.000</h2>
+            <a
+              href="https://wa.me/5491172368753?text=Hola,%20quiero%20contratar%20el%20plan%20lite"
+              class="btn buy"
+              >Contratar</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-card">
+            <img src="img/100MB.png" alt="" />
+          </div>
+
+          <div class="content-card">
+            <h3>Plan Basic</h3>
+            <h2 class="price">$18.000</h2>
+            <a
+              href="https://wa.me/5491172368753?text=Hola,%20quiero%20contratar%20el%20plan%20basic"
+              class="btn buy"
+              >Contratar</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-card">
+            <img src="img/150MB.png" alt="" />
+          </div>
+
+          <div class="content-card">
+            <h3>Plan Standard</h3>
+            <h2 class="price">$20.000</h2>
+            <a
+              href="https://wa.me/5491172368753?text=Hola,%20quiero%20contratar%20el%20plan%20standard"
+              class="btn buy"
+              >Contratar</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-card">
+            <img src="img/150MB.png" alt="" />
+          </div>
+
+          <div class="content-card">
+            <h3>Plan Full</h3>
+            <h2 class="price">$22.000</h2>
+            <a
+              href="https://wa.me/5491172368753?text=Hola,%20quiero%20contratar%20el%20plan%20full"
+              class="btn buy"
+              >Contratar</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="about" class="about">
+      <h1 class="about__title">Sobre nosotros</h1>
+
+      <div class="about__content">
+        <div class="about__text">
+          <p>
+            En SLRED, nos dedicamos a ofrecer conexiones de internet estables,
+            rápidas y al alcance de todos. Nuestra misión es conectar personas,
+            hogares y empresas con la mejor tecnología, atención personalizada y
+            soporte técnico de calidad.
+          </p>
+          <p>
+            Con más de 5 años en el rubro, entendemos lo importante que es estar
+            siempre conectados. Por eso, trabajamos cada día para mejorar
+            nuestros servicios y expandir nuestra cobertura.
+          </p>
+        </div>
+        <div class="about__image">
+          <img src="img/about.jpeg" alt="Equipo de SLRED trabajando" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAJE -->
+    <section class="mensaje particles">
+      <p>Te traemos solo lo mejor...</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="suscribe">
+      <div class="search">
+        <input type="text" class="search-text" placeholder="Tu mensaje..." />
+        <i class="fas fa-paper-plane search-icon"></i>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__info-group">
+        <div class="footer__item">
+          <p class="footer__label">📧 Email</p>
+          <a href="mailto:slred@gmail.com" class="footer__info"
+            >slred@gmail.com</a
+          >
+        </div>
+
+        <div class="footer__item">
+          <p class="footer__label">📞 Teléfono</p>
+          <a href="tel:+5491172368753" class="footer__info"
+            >+54 9 11 7236-8753</a
+          >
+        </div>
+
+        <div class="footer__item">
+          <p class="footer__label">📍 Ubicación</p>
+          <p class="footer__info">Buenos Aires, Argentina</p>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__label">© 2025</p>
+        <p class="footer__info">SLRED - Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </body>
+</html>
