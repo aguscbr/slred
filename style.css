@@ -116,6 +116,19 @@ nav button > div {
   transform-origin: left;
 }
 
+button:hover div:first-child {
+  transform: rotate(45deg) translate(-2px);
+}
+
+button:hover div:nth-child(2) {
+  opacity: 0;
+}
+
+button:hover div:last-child {
+  transform: rotate(-46deg) translate(-2px);
+}
+
+/* MOBILE NAV */
 .mobile__nav {
   position: absolute;
   top: -900px;
@@ -172,7 +185,6 @@ nav button > div {
   background-color: var(--secondary-color);
   transform: scaleX(0);
   transform-origin: left;
-
   transition: transform 0.5s;
 }
 
@@ -198,18 +210,6 @@ nav button > div {
   text-align: center;
   font-size: 20rem;
   transition: all 0.5s;
-}
-
-button:hover div:first-child {
-  transform: rotate(45deg) translate(-2px);
-}
-
-button:hover div:nth-child(2) {
-  opacity: 0;
-}
-
-button:hover div:last-child {
-  transform: rotate(-46deg) translate(-2px);
 }
 
 /* HEADER */
