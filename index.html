@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda online</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="plugins/particles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/ffa16094e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav__brand">
+        <img class="nav__logo" src="img/logo.png" alt="Company Logo" />
+      </div>
+
+      <div class="nav__menu">
+        <a href="#" class="nav__link nav__link--active">Inicio</a>
+        <a href="#about" class="nav__link">Nosotros</a>
+        <a href="#planes" class="nav__link">Planes</a>
+        <a href="#destacado" class="nav__link">Portal clientes</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </div>
+
+      <button class="nav__mobile-toggle" id="mobileNavBtn">
+        <span class="nav__mobile-toggle-bar"></span>
+        <span class="nav__mobile-toggle-bar"></span>
+        <span class="nav__mobile-toggle-bar"></span>
+      </button>
+
+      <div class="nav__mobile">
+        <ul class="nav__mobile-menu">
+          <li class="nav__mobile-item">
+            <a href="#inicio" class="nav__mobile-link">
+              <span class="nav__mobile-text">Inicio</span>  
+            </a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#about" class="nav__mobile-link">
+              <span class="nav__mobile-text">Nosotros</span>  
+            </a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#planes" class="nav__mobile-link">
+              <span class="nav__mobile-text">Planes</span> 
+            </a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#destacado" class="nav__mobile-link">
+              <span class="nav__mobile-text">Portal Clientes</span> 
+            </a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#contacto" class="nav__mobile-link">
+              <span class="nav__mobile-text">Contacto</span> 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Conectamos tu mundo con la mejor velocidad</h1>
+        <a href="#planes" class="button button--primary">Planes</a>
+      </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <div class="about__container">
+        <div class="about__content">
+          <h2 class="section__title">Nosotros</h2>
+          <div class="about__text">
+            <p class="about__description">
+              En SLRED, nos dedicamos a proporcionar servicios de internet de alta calidad que transforman la manera en que las personas se conectan al mundo digital. Con más de una década de experiencia, hemos construido una red robusta y confiable que sirve a miles de hogares y empresas.
+            </p>
+            <div class="about__features">
+              <div class="about__feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Tecnología de última generación</span>
+              </div>
+              <div class="about__feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Soporte técnico 24/7</span>
+              </div>
+              <div class="about__feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Cobertura en expansión constante</span>
+              </div>
+              <div class="about__feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Compromiso con la calidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__image">
+          <img src="https://plus.unsplash.com/premium_photo-1671017817487-baaae0de6d4d?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SLRED Team" class="about__img">
+          <div class="about__image-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planes" class="plans">
+      <h1 class="section__title">Nuestros planes</h1>
+
+      <div class="plans__grid">
+        <div class="plan-card">
+          <div class="plan-card__image">
+            <img src="img/50MB.png" alt="Plan 50MB" class="plan-card__img" />
+          </div>
+  
+          <div class="plan-card__content">
+            <h3 class="plan-card__price">$99</h3>
+            <div class="plan-card__details">
+              <h4 class="plan-card__name">Plan Básico - 50MB</h4>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Velocidad de 50MB
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Conexión estable
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Soporte 24/7
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Instalación gratuita
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+          </div>
+        </div>
+
+        <div class="plan-card plan-card--popular">
+          <div class="plan-card__image">
+            <img src="img/100MB.png" alt="Plan 100MB" class="plan-card__img" />
+          </div>
+  
+          <div class="plan-card__content">
+            <h3 class="plan-card__price">$149</h3>
+            <div class="plan-card__details">
+              <h4 class="plan-card__name">Plan Familiar - 100MB</h4>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Velocidad de 100MB
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Conexión estable
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Soporte prioritario 24/7
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Instalación gratuita
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  WiFi Mesh incluido
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+          </div>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-card__image">
+            <img src="img/150MB.png" alt="Plan 150MB" class="plan-card__img" />
+          </div>
+  
+          <div class="plan-card__content">
+            <h3 class="plan-card__price">$199</h3>
+            <div class="plan-card__details">
+              <h4 class="plan-card__name">Plan Premium - 150MB</h4>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Velocidad de 150MB
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Conexión estable
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Soporte VIP 24/7
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  Instalación gratuita
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  WiFi Mesh Premium
+                </li>
+                <li class="plan-card__feature">
+                  <i class="fas fa-check"></i>
+                  IP Fija incluida
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message">
+      <p class="message__text">Te traemos solo lo mejor...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+      <h2 class="section__title">Contacto</h2>
+      <div class="contact__container">
+        <div class="contact__info">
+          <div class="contact__info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Teléfono</h3>
+              <p>+1 (234) 567-8900</p>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>contacto@slred.com</p>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Horario</h3>
+              <p>Lun - Vie: 9:00 - 18:00</p>
+              <p>Sáb: 10:00 - 14:00</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact__form">
+          <div class="contact__form-group">
+            <div class="contact__form-field">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Nombre</label>
+              <span class="contact__form-line"></span>
+            </div>
+            <div class="contact__form-field">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email</label>
+              <span class="contact__form-line"></span>
+            </div>
+          </div>
+          
+          <div class="contact__form-field">
+            <input type="text" id="subject" name="subject" required>
+            <label for="subject">Asunto</label>
+            <span class="contact__form-line"></span>
+          </div>
+          
+          <div class="contact__form-field">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Mensaje</label>
+            <span class="contact__form-line"></span>
+          </div>
+
+          <button type="submit" class="contact__submit">
+            <span>Enviar Mensaje</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__info">
+          <div class="footer__item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="footer__text">
+              <h4>Ubicación</h4>
+              <p>Av. Principal #123, Ciudad</p>
+            </div>
+          </div>
+          
+          <div class="footer__item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="footer__text">
+              <h4>Teléfono</h4>
+              <p>+1 (234) 567-8900</p>
+            </div>
+          </div>
+          
+          <div class="footer__item">
+            <i class="fas fa-envelope"></i>
+            <div class="footer__text">
+              <h4>Email</h4>
+              <p>contacto@slred.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer__copyright">
+          <p>&copy; 2024 SLRED. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
