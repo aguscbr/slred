@@ -3,22 +3,20 @@ const mobileNavBtn = document.getElementById("mobileNavBtn");
 const mobileNav = document.querySelector(".nav__mobile");
 const mobileNavLinks = document.querySelectorAll(".nav__mobile-link");
 const navLinks = document.querySelectorAll(".nav__link");
+const body = document.body;
 
 // Toggle mobile navigation
 function toggleMobileNav() {
   mobileNavBtn.classList.toggle("active");
   mobileNav.classList.toggle("active");
-  document.body.classList.toggle("nav-open");
-  // Update body scroll
-  document.body.style.overflow = mobileNav.classList.contains("active") ? "hidden" : "";
+  body.style.overflow = body.style.overflow === "hidden" ? "" : "hidden";
 }
 
 // Close mobile navigation when clicking a link
 function closeMobileNav() {
   mobileNavBtn.classList.remove("active");
   mobileNav.classList.remove("active");
-  document.body.classList.remove("nav-open");
-  document.body.style.overflow = "";
+  body.style.overflow = "";
 }
 
 // Intersection Observer for sections
@@ -680,3 +678,49 @@ document.addEventListener(
       clearTimeout(id);
     };
 })();
+
+// Initialize EmailJS
+(function() {
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+})();
+
+// Contact form submission
+const contactForm = document.getElementById('contactForm');
+const submitButton = document.getElementById('submitButton');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Disable submit button and show loading state
+    submitButton.disabled = true;
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+      to_email: 'serverlanwisp@gmail.com'
+    };
+
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+        // Show success message
+        alert('¡Mensaje enviado con éxito!');
+        contactForm.reset();
+      }, function(error) {
+        // Show error message
+        alert('Error al enviar el mensaje. Por favor, intente nuevamente.');
+        console.error('EmailJS error:', error);
+      })
+      .finally(function() {
+        // Re-enable submit button and restore original text
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      });
+  });
+}

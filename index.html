@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/ffa16094e7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="app.js" defer></script>
   </head>
 
@@ -146,7 +147,7 @@
                 </li>
               </ul>
             </div>
-            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+            <a href="https://wa.me/5491173675664?text=Hola%2C%20quiero%20contratar%20el%20plan%20Lite" class="button button--primary plan-card__button" target="_blank">Contratar</a>
           </div>
         </div>
 
@@ -174,7 +175,7 @@
                 </li>
               </ul>
             </div>
-            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+            <a href="https://wa.me/5491173675664?text=Hola%2C%20quiero%20contratar%20el%20plan%20Basic" class="button button--primary plan-card__button" target="_blank">Contratar</a>
           </div>
         </div>
 
@@ -202,7 +203,7 @@
                 </li>
               </ul>
             </div>
-            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+            <a href="https://wa.me/5491173675664?text=Hola%2C%20quiero%20contratar%20el%20plan%20Standard" class="button button--primary plan-card__button" target="_blank">Contratar</a>
           </div>
 
         </div>
@@ -231,7 +232,7 @@
                 </li>
               </ul>
             </div>
-            <a href="#" class="button button--primary plan-card__button">Contratar</a>
+            <a href="https://wa.me/5491173675664?text=Hola%2C%20quiero%20contratar%20el%20plan%20Full" class="button button--primary plan-card__button" target="_blank">Contratar</a>
           </div>
 
         </div>
@@ -240,7 +241,14 @@
 
     <!-- Message Section -->
     <section class="message">
-      <p class="message__text">Te traemos solo lo mejor...</p>
+      <div class="message__container">
+        <div class="message__content">
+          <i class="fas fa-star message__icon"></i>
+          <h2 class="message__title">Te traemos solo lo mejor</h2>
+          <p class="message__subtitle">Conectividad de calidad para tu hogar y empresa</p>
+        </div>
+        <div class="message__wave"></div>
+      </div>
     </section>
 
     <!-- Contact Section -->
@@ -252,14 +260,14 @@
             <i class="fas fa-phone"></i>
             <div>
               <h3>Teléfono</h3>
-              <p>+1 (234) 567-8900</p>
+              <p>+54 9 11 7367-5664</p>
             </div>
           </div>
           <div class="contact__info-item">
             <i class="fas fa-envelope"></i>
             <div>
               <h3>Email</h3>
-              <p>contacto@slred.com</p>
+              <p>serverlanwisp@gmail.com</p>
             </div>
           </div>
           <div class="contact__info-item">
@@ -272,7 +280,7 @@
           </div>
         </div>
 
-        <form class="contact__form">
+        <form class="contact__form" id="contactForm">
           <div class="contact__form-group">
             <div class="contact__form-field">
               <input type="text" id="name" name="name" required>
@@ -298,11 +306,23 @@
             <span class="contact__form-line"></span>
           </div>
 
-          <button type="submit" class="contact__submit">
+          <button type="submit" class="contact__submit" id="submitButton">
             <span>Enviar Mensaje</span>
             <i class="fas fa-paper-plane"></i>
           </button>
         </form>
+      </div>
+
+      <div class="contact__map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.7199934684854!2d-58.302784524878646!3d-34.712241763236605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33354193f80d3%3A0x18a81d73534726cd!2sSL-RED!5e0!3m2!1ses!2sar!4v1748796486608!5m2!1ses!2sar" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </section>
 
@@ -314,7 +334,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <div class="footer__text">
               <h4>Ubicación</h4>
-              <p>Montevideo y Falucho</p>
+              <p>Montevideo 685, Bernal Oeste</p>
             </div>
           </div>
           
@@ -330,7 +350,7 @@
             <i class="fas fa-envelope"></i>
             <div class="footer__text">
               <h4>Email</h4>
-              <p>slred@gmail.com</p>
+              <p>serverlanwisp@gmail.com</p>
             </div>
           </div>
         </div>
