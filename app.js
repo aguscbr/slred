@@ -724,3 +724,40 @@ if (contactForm) {
       });
   });
 }
+
+// Initialize lazy loading for plan images
+function initializeLazyLoading() {
+  const images = document.querySelectorAll('.plan-card__img[data-src]');
+  
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        
+        img.onload = () => {
+          img.classList.add('loaded');
+          img.parentElement.classList.add('loaded');
+        };
+        
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '50px 0px',
+    threshold: 0.1
+  });
+
+  images.forEach(img => imageObserver.observe(img));
+}
+
+// Call the function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeLazyLoading);
+
+// Form validation
+const form = document.getElementById('contactForm');
+form.addEventListener('input', (e) => {
+  const input = e.target;
+  const isValid = input.checkValidity();
+  input.classList.toggle('invalid', !isValid);
+});

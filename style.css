@@ -222,7 +222,7 @@ body {
 
 @media (max-width: 768px) {
   .hero__title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 
   .hero .button {
@@ -328,14 +328,38 @@ body {
   transform-style: preserve-3d;
 }
 
+.plan-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.plan-card__image.loaded::before {
+  opacity: 0;
+}
+
 .plan-card__img {
   width: auto;
   height: auto;
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateY(10px);
+}
+
+.plan-card__img.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .plan-card:hover .plan-card__img {
@@ -847,7 +871,7 @@ body {
 
 @media (max-width: 768px) {
   .contact__form-group {
-    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
   
   .contact__info {
@@ -1314,4 +1338,36 @@ body {
 .contact__map iframe {
   display: block;
   margin: 0 auto;
+}
+
+/* Add loading skeleton */
+.plan-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  .contact__form-group {
+    gap: var(--spacing-md);
+  }
+  
+  .nav__mobile {
+    height: -webkit-fill-available; /* Fix for iOS */
+  }
 }
